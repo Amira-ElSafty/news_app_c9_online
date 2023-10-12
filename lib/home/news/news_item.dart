@@ -21,21 +21,16 @@ class NewsItem extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.3,
             child: ClipRRect(
                 borderRadius: BorderRadius.circular(18),
-                child: Image.network(
-                  news.urlToImage ?? '',
+                child:CachedNetworkImage(
+                  imageUrl: news.urlToImage??'',
                   width: double.infinity,
                   height: MediaQuery.of(context).size.height * 0.3,
                   fit: BoxFit.fill,
+                  placeholder: (context, url) => Center(child: CircularProgressIndicator()),
+                  errorWidget: (context, url, error) => Icon(Icons.error),
                 ),
             ),
       ),
-
-                // CachedNetworkImage(
-                //     imageUrl: news.urlToImage??'',
-                //   placeholder: (context, url) => Center(child: CircularProgressIndicator()),
-                //   errorWidget: (context, url, error) => Icon(Icons.error),
-                // ),
-
 
           SizedBox(
             height: 10,
