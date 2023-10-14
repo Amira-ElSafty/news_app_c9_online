@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_news_app_c9_online/home/category/category_item.dart';
-import 'package:flutter_news_app_c9_online/home/model/categoryDM.dart';
+import 'package:flutter_news_app_c9_online/model/categoryDM.dart';
 
 class CategoryFragment extends StatelessWidget {
   var categoriesList = CategoryDM.getCategories(); /// List<CategoryDM>

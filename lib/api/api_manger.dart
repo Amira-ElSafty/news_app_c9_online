@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter_news_app_c9_online/api/api_constants.dart';
-import 'package:flutter_news_app_c9_online/home/model/NewsResponse.dart';
-import 'package:flutter_news_app_c9_online/home/model/SourcesResponse.dart';
+import 'package:flutter_news_app_c9_online/model/NewsResponse.dart';
+import 'package:flutter_news_app_c9_online/model/SourcesResponse.dart';
 import 'package:http/http.dart' as http;
 
 class ApiManager {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_news_app_c9_online/home/category/category_details.dart';
 import 'package:flutter_news_app_c9_online/home/category/category_fragment.dart';
 import 'package:flutter_news_app_c9_online/home/home_drawer.dart';
-import 'package:flutter_news_app_c9_online/home/model/categoryDM.dart';
+import 'package:flutter_news_app_c9_online/model/categoryDM.dart';
 import 'package:flutter_news_app_c9_online/my_theme.dart';
 import 'package:flutter_news_app_c9_online/settings/settings_tab.dart';
 

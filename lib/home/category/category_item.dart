@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_news_app_c9_online/home/model/categoryDM.dart';
+import 'package:flutter_news_app_c9_online/model/categoryDM.dart';
 import 'package:flutter_news_app_c9_online/my_theme.dart';
 
 class CategoryItem extends StatelessWidget {

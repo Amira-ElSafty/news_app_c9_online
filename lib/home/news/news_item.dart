@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_news_app_c9_online/home/model/NewsResponse.dart';
+import 'package:flutter_news_app_c9_online/model/NewsResponse.dart';
 import 'package:flutter_news_app_c9_online/my_theme.dart';
 
 
