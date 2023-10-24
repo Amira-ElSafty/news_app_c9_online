@@ -13,7 +13,7 @@ class MyTheme {
   static Color blackColor = Color(0xff303030);
 
   static ThemeData lightTheme = ThemeData(
-      primaryColor: primaryLightColor,
+    primaryColor: primaryLightColor,
       appBarTheme: AppBarTheme(
           backgroundColor: primaryLightColor,
           centerTitle: true,

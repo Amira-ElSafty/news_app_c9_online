@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_news_app_c9_online/home/category/category_details.dart';
-import 'package:flutter_news_app_c9_online/home/category/category_fragment.dart';
-import 'package:flutter_news_app_c9_online/home/home_drawer.dart';
-import 'package:flutter_news_app_c9_online/home/model/categoryDM.dart';
+import 'package:flutter_news_app_c9_online/home/category/category_fragments.dart';
+import 'package:flutter_news_app_c9_online/home/settings/settings_tab.dart';
+import 'package:flutter_news_app_c9_online/home/tabs/home_drawer.dart';
+import 'package:flutter_news_app_c9_online/model/category.dart';
 import 'package:flutter_news_app_c9_online/my_theme.dart';
-import 'package:flutter_news_app_c9_online/settings/settings_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'home';
@@ -27,40 +27,44 @@ class _HomeScreenState extends State<HomeScreen> {
               fit: BoxFit.cover,
             )),
         Scaffold(
+          backgroundColor: Colors.transparent,
           appBar: AppBar(
+            centerTitle: true,
             title: Text(
-              selectedMenuItem == HomeDrawer.settings ? 'Settings':
-              selectedCategory == null ?'News App' : selectedCategory!.title,
+              selectedDrawerItem == HomeDrawer.settings ?
+                  'Settings':
+              selectedCategory == null ?
+              'News App'
+              : selectedCategory!.title,
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
           drawer: Drawer(
-            child: HomeDrawer(onSideMenuItem: onSideMenuItem),
+            child: HomeDrawer(onDrawerItemClick: onDrawerItemClick ),
           ),
-          body: selectedMenuItem == HomeDrawer.settings ?
-              SettingTab()
+          body: selectedDrawerItem == HomeDrawer.settings ?
+              SettingsTab()
               :
-          selectedCategory == null
-              ? CategoryFragment(onCategoryClick: onCategoryClick)
-              : CategoryDetails(category: selectedCategory!),
-        ),
+          selectedCategory == null ?
+          CategoryFragment(onCategoryClick: onCategoryClick):
+          CategoryDetails(category: selectedCategory!),
+        )
       ],
     );
   }
 
-  CategoryDM? selectedCategory;
-  void onCategoryClick(CategoryDM newSelectedCategory) {
-    //todo: newsSelectedCategory => User
-    selectedCategory = newSelectedCategory;
+  Category? selectedCategory ;
+
+  void onCategoryClick(Category newSelectedCategory){
+    selectedCategory = newSelectedCategory ;
     setState(() {
 
     });
   }
 
-  int selectedMenuItem = HomeDrawer.categories ;
-  void onSideMenuItem(int newsSelectedMenuItem){
-  //todo: newsSelectedMenuItem => User
-    selectedMenuItem = newsSelectedMenuItem ;
+  int selectedDrawerItem = HomeDrawer.categories ;
+  void onDrawerItemClick(int newSelectedDrawerItem){
+    selectedDrawerItem = newSelectedDrawerItem ;
     selectedCategory = null ;
     Navigator.pop(context);
     setState(() {

@@ -1,15 +1,14 @@
-import 'package:flutter_news_app_c9_online/home/model/SourcesResponse.dart';
 
-abstract class SourceStates{}   /// parent class
-class SourceLoadingState extends SourceStates {
-  //todo: loadingMessage
-}
+import 'package:flutter_news_app_c9_online/model/SourceResponse.dart';
 
-class SourceErrorState extends SourceStates {
+abstract class SourceStates{}
+class SourceInitialState extends SourceStates{}
+class SourceLoadingState extends SourceStates{}
+class SourceErrorState extends SourceStates{
   String? errorMessage ;
   SourceErrorState({required this.errorMessage});
 }
-class SourceSucuessState extends SourceStates {
+class SourceSuccuessState extends SourceStates{
   List<Source> sourceList ;
-  SourceSucuessState({required this.sourceList});
+  SourceSuccuessState({required this.sourceList});
 }

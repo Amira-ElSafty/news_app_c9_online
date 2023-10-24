@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_news_app_c9_online/home/category/category_details.dart';
 import 'package:flutter_news_app_c9_online/home/home_screen.dart';
 import 'package:flutter_news_app_c9_online/my_bloc_observer.dart';
 import 'package:flutter_news_app_c9_online/my_theme.dart';
